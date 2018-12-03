@@ -1,0 +1,85 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Dealsyte",
+		"_postman_id": "ca5f71db-9913-4b4c-656c-1161213d9414",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Issues",
+			"request": {
+				"url": "localhost:3000/issues",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "New Issue",
+			"request": {
+				"url": "localhost:3000/issues",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Issue Title\",\n\t\"description\": \"Issue Description\",\n\t\"flightCode\": \"123AE653BC\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Assign an issue",
+			"request": {
+				"url": "localhost:3000/issues/1/assign",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"issueId\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Change status",
+			"request": {
+				"url": "localhost:3000/issues/1/status",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"state\": \"resolved\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
