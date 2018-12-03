@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS dealsyte;
 CREATE USER IF NOT EXISTS ds;
-GRANT all ON dealsyte.* to ds@localhost identified by 'mypass';
+GRANT all ON dealsyte.* to ds@`%` identified by 'mypass';
 USE dealsyte;
 
 -- MySQL dump 10.13  Distrib 8.0.12, for osx10.13 (x86_64)
