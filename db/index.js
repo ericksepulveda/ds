@@ -18,3 +18,10 @@ module.exports = {
   User,
   Issue
 }
+
+try {
+  (async function seed () {
+    const user = await User.findOne({ where: { id: 1 } })
+    if (!user) await User.create({ user: 'demo', pass: 'seed', isAdmin: true })
+  })()
+} catch (e) {}
